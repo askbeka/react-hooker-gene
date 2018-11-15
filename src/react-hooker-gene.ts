@@ -1,5 +1,6 @@
 import {
   useContext as reactUseContext,
+  useState as reactUseState,
   useReducer as reactUseReducer,
   useRef as reactUseRef,
   useMutationEffect as reactUseMutationEffect,
@@ -46,6 +47,7 @@ export default (generator: component) => (props: Object) => {
 }
 
 export const useContext = (...args: any[]) => makeHook(reactUseContext, args)
+export const useState = (...args: any[]) => makeHook(reactUseState, args)
 export const useReducer = (...args: any[]) => makeHook(reactUseReducer, args)
 export const useRef = (...args: any[]) => makeHook(reactUseRef, args)
 export const useMutationEffect = (...args: any[]) => makeHook(reactUseMutationEffect, args)
